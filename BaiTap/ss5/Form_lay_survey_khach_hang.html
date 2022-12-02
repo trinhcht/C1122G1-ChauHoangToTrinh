@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form lấy survey khách hàng</title>
+</head>
+<body>
+<header>
+<h2>Market Research Survey</h2>
+<p>Please take a few moments to complete this satisfaction survey.</p>
+</header>
+<div class="form-reg">
+<form action="" method="get">
+    <b>What is your age range?</b><br>
+    <select>
+        <option>18-24</option>
+        <option>25-24</option>
+        <option>35-50</option>
+        <option>50+</option>
+    </select>
+</form>
+<form>
+    <b>What is your yearly income range?</b><br>
+    <select>
+        <option>$0-$25000</option>
+        <option>$25001-$50000</option>
+        <option>$50001-$10000</option>
+        <option>+$100000</option>
+    </select>
+</form>
+    <form>
+        <b>Gender Identity</b><br>
+        <input name="gender" type="radio" value="Male">Male<br>
+        <input name="gender" type="radio" value="Female">Female<br>
+        <input name="gender" type="radio" value="Nonbinary">Nonbinary<br>
+        <input name="gender" type="radio" value="Other">Other<br>
+        <input type="text" name="Other"><br>
+        <span>Maximum of 250 characters.</span>
+        <span>Currently Used: 0 characters.</span>
+    </form>
+    <form>
+        <b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b><br>
+        <td class="product"><input type="checkbox">Product 1</td><br>
+        <td class="product"><input type="checkbox">Product 2</td><br>
+        <td class="product"><input type="checkbox">Product 3</td><br>
+    </form>
+    <form>
+        <b>How often would you use our new product?</b><br>
+        <input name="time" type="radio" value="Daily">Daily<br>
+        <input name="time" type="radio" value="Weekly">Weekly<br>
+        <input name="time" type="radio" value="Monthly">Monthly<br>
+    </form>
+    <b>What would you pay for the new product?</b><br>
+    <table>
+        <tr>
+            <th>$</th>
+            <th><input type="text"></th>
+            <th>.</th>
+            <th><input type="text"
+                       id="sessionNo"
+                       name="sessionNum"
+                       onkeypress="return isNumberKey(event)"
+                       maxlength="2" /></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Dollars</th>
+            <th></th>
+            <th>Cents</th>
+        </tr>
+    </table>
+    <form>
+        <b>What would you pay for the new product?</b><br>
+<!--         <input type="text">-->
+        <textarea></textarea>
+    </form>
+    <form>
+        <b>Please rate your level of agreement with the following statements.</b>
+        <table>
+            <tr style="background: slategray">
+                <th></th>
+                <th>Strongly Disagree</th>
+                <th>Disagree</th>
+                <th>Agree</th>
+                <th>Strongly Agree</th>
+            </tr>
+            <tr>
+                <th>Our products are priced fairly</th>
+                <th><input name="rate-price" type="radio" value="1">1</th>
+                <th><input name="rate-price" type="radio" value="2">2</th>
+                <th><input name="rate-price" type="radio" value="3">3</th>
+                <th><input name="rate-price" type="radio" value="4">4</th>
+            </tr>
+            <tr style="background: slategray">
+                <th>Our products are high quality</th>
+                <th><input name="rate-price" type="radio" value="1">1</th>
+                <th><input name="rate-price" type="radio" value="2">2</th>
+                <th><input name="rate-price" type="radio" value="3">3</th>
+                <th><input name="rate-price" type="radio" value="4">4</th>
+            </tr>
+            <tr>
+                <th>You would recommend our product to a friend or coworker.</th>
+                <th><input name="rate-price" type="radio" value="1">1</th>
+                <th><input name="rate-price" type="radio" value="2">2</th>
+                <th><input name="rate-price" type="radio" value="3">3</th>
+                <th><input name="rate-price" type="radio" value="4">4</th>
+            </tr>
+        </table>
+    </form>
+    <style>
+        .form-reg h4
+        {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    </style><br>
+    <tr>
+        <th></th>
+        <th><input type="submit" value="Submit"></th>
+    </tr>
+</div>
+</body>
+</html>
