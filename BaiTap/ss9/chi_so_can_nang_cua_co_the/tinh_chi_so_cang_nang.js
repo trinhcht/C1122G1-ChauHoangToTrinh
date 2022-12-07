@@ -4,13 +4,13 @@ function kiem_tra(){
     let bmi = weight / (Math.pow(hight, 2));
     let result = '';
     if (bmi < 18) {
-        result = 'Underweight'
+        result = 'Underweight';
     } else if (bmi < 25) {
-        result = 'Normal'
+        result = 'Normal';
     } else if (bmi < 30) {
-        result = 'Overweight'
+        result = 'Overweight';
     } else {
-        result = 'Obese'
+        result = 'Obese';
     }
     document.getElementById('result').innerHTML = "Chỉ số BMI là: " + bmi +'&nbsp;'+'&nbsp;'+ '<b>'+ result + '</b>';
 }
