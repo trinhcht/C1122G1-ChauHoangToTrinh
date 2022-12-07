@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+    <script>
+        let a= +prompt('Nhập số điện năng tiêu thụ ');
+        let money;
+        if (a>=401){
+            money= a*2.587;
+            alert('Số tiền phải trả ' +money);
+        }
+       else if (a>300){
+                money= a*2.503;
+                alert('Số tiền phải trả ' +money);
+            }
+            else if (a>200){
+                money= a*2.242;
+                alert('Số tiền phải trả ' +money);
+            }
+            else if (a>100){
+                money= a*1.786;
+                alert('Số tiền phải trả ' +money);
+            }
+            else if (a>50){
+                money= a*1.533;
+                alert('Số tiền phải trả ' +money);
+            }
+            else if (a>=0){
+                money= a*1.484;
+                alert('Số tiền phải trả ' +money);
+            }
+        else {
+            alert('Nhập số điện năng không hợp lệ ');
+        }
+    </script>
+</body>
+</html>

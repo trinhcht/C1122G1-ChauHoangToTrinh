@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let thunhap = +prompt('Nhập thu nhập cá nhân ')
+    let vat;
+    if (thunhap>80000000) {
+        vat = thunhap*35/100-9850000;
+        alert('Số tiền thuế phải đóng là: ' + vat);
+    } else if (thunhap>52000000) {
+        vat = thunhap*30/100-5850000;
+        alert('Số tiền thuế phải đóng là: ' + vat);
+    } else if (thunhap>32000000) {
+        vat = thunhap*25/100-3250000;
+        alert('Số tiền thuế phải đóng là: ' + vat);
+    } else if (thunhap>18000000) {
+        vat = thunhap*20/100-1650000;
+        alert('Số tiền thuế phải đóng là: ' + vat);
+    } else if (thunhap>10000000) {
+        vat = thunhap*15/100-750000;
+        alert('Số tiền thuế phải đóng là: ' + vat);
+    } else if (thunhap>5000000) {
+        vat = thunhap*10/100-250000;
+        alert('Số tiền thuế phải đóng là: ' + vat);
+    } else if (thunhap>0) {
+        vat = thunhap*5/100 ;
+        alert('Số tiền thuế phải đóng là: ' + vat);
+    }
+    else {
+        alert('Nhập thu nhập không hợp lệ');
+    }
+</script>
+</body>
+</html>
