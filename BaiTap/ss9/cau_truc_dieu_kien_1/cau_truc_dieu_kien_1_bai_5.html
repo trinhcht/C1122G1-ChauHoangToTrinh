@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực học sinh</title>
+</head>
+<body>
+    <script>
+        let kiemtra= +prompt('nhập điểm kiểm tra');
+        let giuaky= +prompt('nhập điểm giữa kỳ');
+        let cuoiky= +prompt('nhập điểm cuối kỳ');
+        let dtb;
+        if (dtb=((kiemtra+giuaky*2+cuoiky*3)/6)>=8){
+            alert('Học sinh giỏi');
+        }
+        else if (dtb=((kiemtra+giuaky*2+cuoiky*3)/6)>=6.5){
+            alert('Học sinh khá');
+        }
+        else if (dtb=((kiemtra+giuaky*2+cuoiky*3)/6)>=5){
+            alert('Học sinh trung bình');
+        }
+        else {
+            alert('Học sinh kém');
+        }
+    </script>
+</body>
+</html>

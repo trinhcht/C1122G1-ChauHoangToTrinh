@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+    <script>
+        let sale= parseInt(prompt('Nhập doanh số bán hàng'));
+        let a= sale*20/100;
+        let b= sale*10/100;
+        let c= sale*5/100;
+        if (sale<1000){
+            alert('bạn không nhận được hoa hồng');
+        }
+        else if (sale>=1000 && sale<2500){
+            alert('Bạn nhận được hoa hồng là: ' +c);
+        }
+        else if (sale>=2500 && sale<4000){
+            alert('Bạn nhận được hoa hồng là: ' +b);
+        }
+        else {
+            alert('Bạn nhận được hoa hồng là: ' +a);
+        }
+    </script>
+</body>
+</html>
