@@ -1,18 +1,18 @@
 function ChangeMoney() {
-    let Amount = document.getElementById("Amount").value;
-    let FromC = document.getElementById("From").value;
-    let To = document.getElementById("To").value;
-    let Result='';
-    if (FromC == "USD" && To == "VND") {
-        Result = "Result: " + (Amount * 23000) + " Đ";
+    let amount = document.getElementById("amount").value;
+    let fromc = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let result='';
+    if (fromc == "USD" && to == "VND") {
+        result = "result: " + (amount * 23000) + " Đ";
     }
-    else if (FromC == "VND"&& To =="USD"){
-        Result = "Result: "+ (Amount / 23000) + " $";
+    else if (fromc == "VND"&& To =="USD"){
+        result = "result: "+ (amount / 23000) + " $";
     }
-    else if (FromC == "VND") {
-        Result = "Result: " + Amount + " Đ"
+    else if (fromc == "VND") {
+        result = "result: " + amount + " Đ";
     } else {
-        Result = "Result: " + Amount + " $"
+        result = "result: " + amount + " $";
     }
-    document.getElementById("Result").innerHTML = Result;
+    document.getElementById("result").innerHTML = result;
 }
