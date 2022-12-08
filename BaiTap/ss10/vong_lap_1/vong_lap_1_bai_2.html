@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhiệt độ</title>
+</head>
+<body>
+    <script>
+        let nhietDo= +prompt('Nhập nhiệt độ ');
+        for (let i=0; i<=100; i++){
+            if (nhietDo>100){
+                alert('Giảm nhiệt độ ');
+            } else if (20<=nhietDo && nhietDo<=100){
+                alert('Nhiệt độ bình thường ');
+            } else {
+                alert('Tăng nhiệt độ ');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

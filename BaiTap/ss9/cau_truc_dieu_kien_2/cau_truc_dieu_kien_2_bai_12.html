@@ -6,14 +6,16 @@
 </head>
 <body>
     <script>
-        let money_begin= +prompt('Nhập số tiền ban đầu: ');
-        let month= +prompt('Nhập số tháng cho vay: ');
-        let interest_rate= +prompt('Nhập lãi suất hàng tháng: ');
+        let moneyBegin= +prompt('Nhập số tiền gửi ban đầu: ');
+        let month= +prompt('Nhập số tháng gửi tiết kiệm: ');
+        let interestRate= +prompt('Nhập lãi suất: ');
+        let lai;
         let result;
         if (month>0){
-            result= money_begin*interest_rate*month/(12*month);
+            result= moneyBegin*Math.pow(1+(interestRate / 100), (month/12));
+            lai= result-moneyBegin;
         }
-        document.write(result);
+        document.write(lai);
     </script>
 </body>
 </html>
