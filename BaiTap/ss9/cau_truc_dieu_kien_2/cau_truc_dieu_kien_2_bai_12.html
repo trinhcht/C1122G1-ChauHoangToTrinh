@@ -11,11 +11,13 @@
         let interestRate= +prompt('Nhập lãi suất: ');
         let lai;
         let result;
-        if (month>0){
+        if (moneyBegin>0 && month>1){
             result= moneyBegin*Math.pow(1+(interestRate / 100), (month/12));
             lai= result-moneyBegin;
+        } else {
+            alert('Số tiền không hợp lệ ');
         }
-        document.write(lai);
+        document.write('Số tiền lại nhận được: ' +lai);
     </script>
 </body>
 </html>
