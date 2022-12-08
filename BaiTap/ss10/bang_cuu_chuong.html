@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng Cửu Chương</title>
+</head>
+<body>
+<h2>Bảng Cửu Chương</h2>
+    <script>
+        let multiplication_table, i, j;
+        multiplication_table= '<table border="2" cellspacing="1" cellpadding="4">';
+        for (i=1; i<=9; i++){
+            multiplication_table= multiplication_table+'<tr>';
+            for (j=2; j<10; j++){
+                multiplication_table= multiplication_table+'<td>'+ j + 'x' + i + '=' + i*j + '</td>';
+            }
+            multiplication_table= multiplication_table+ '</tr>';
+        }
+        multiplication_table= multiplication_table+ '</table>';
+        document.write(multiplication_table);
+    </script>
+</body>
+</html>

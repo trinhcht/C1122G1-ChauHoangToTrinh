@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <script>
+        let money_begin= +prompt('Nhập số tiền ban đầu: ');
+        let month= +prompt('Nhập số tháng cho vay: ');
+        let interest_rate= +prompt('Nhập lãi suất hàng tháng: ');
+        let result;
+        if (month>0){
+            result= money_begin*interest_rate*month/(12*month);
+        }
+        document.write(result);
+    </script>
+</body>
+</html>
