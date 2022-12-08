@@ -1,15 +1,15 @@
 function ChangeMoney() {
     let amount = document.getElementById("amount").value;
-    let fromc = document.getElementById("from").value;
+    let fromC = document.getElementById("from").value;
     let to = document.getElementById("to").value;
     let result='';
-    if (fromc == "USD" && to == "VND") {
+    if (fromC == "USD" && to == "VND") {
         result = "result: " + (amount * 23000) + " Đ";
     }
-    else if (fromc == "VND"&& To =="USD"){
+    else if (fromC == "VND"&& To =="USD"){
         result = "result: "+ (amount / 23000) + " $";
     }
-    else if (fromc == "VND") {
+    else if (fromC == "VND") {
         result = "result: " + amount + " Đ";
     } else {
         result = "result: " + amount + " $";
