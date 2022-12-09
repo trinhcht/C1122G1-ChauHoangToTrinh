@@ -5,25 +5,23 @@
     <title>Giải phương trình bậc 2</title>
 </head>
 <body>
-    <script>
-        let a= +prompt('Nhập a: ');
-        let b= +prompt('Nhập b: ');
-        let c= +prompt('Nhập c: ');
-        let x1;
-        let x2;
-        let delta = b*b-4*a*c;
-        if(delta == 0){
-            x1=(-b)/2*a;
-            alert('Phương trình cò nghiệm kép ' +x1);
-        }
-        else if (delta<0){
-            alert('Phương trình vô nghiệm');
-        }
-        else if (delta>0){
-            x1= (-b + Math.sqrt(delta))/(2*a);
-            x2= (-b - Math.sqrt(delta))/(2*a);
-            alert('Phương trình có nghiệm ' +x1+ ' ' +x2);
-        }
-    </script>
+<script>
+    let a = +prompt('Nhập a: ');
+    let b = +prompt('Nhập b: ');
+    let c = +prompt('Nhập c: ');
+    let x1;
+    let x2;
+    let delta = b * b - 4 * a * c;
+    if (delta == 0) {
+        x1 = (-b) / 2 * a;
+        alert('Phương trình cò nghiệm kép ' + x1);
+    } else if (delta < 0) {
+        alert('Phương trình vô nghiệm');
+    } else if (delta > 0) {
+        x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        alert('Phương trình có nghiệm ' + x1 + ' ' + x2);
+    }
+</script>
 </body>
 </html>

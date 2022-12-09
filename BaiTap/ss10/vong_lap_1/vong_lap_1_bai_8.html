@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random</title>
+</head>
+<body>
+<h2>Hãy thử đoán xem!</h2>
+<button id="game" onclick="doThis()">Bắt đầu chơi</button>
+<script>
+    function doThis() {
+    let n=+prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu? ');
+    let e=Math.floor(Math.random()*n);
+    for (let i=1; i<=3; i++){
+        let doanSo= +prompt('Nhập số bạn đoán ');
+        if (e==doanSo){
+            alert('Chúc mừng, bạn đã đoán trúng ');
+            break;
+        } else if (i<3){
+            if (doanSo<e){
+                alert('Số bạn đoán lớn hơn ');
+            } else if (doanSo>e){
+                alert('Số bạn đoán nhỏ hơn ');
+            } else if (i>=3){
+                alert('Bạn hết số lần đoán ');
+            }
+        }
+    }
+    }
+</script>
+
+</body>
+</html>
