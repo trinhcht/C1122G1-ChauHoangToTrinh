@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // cách 1 của đào, hơi khó hiểu
+    // const num=window.prompt();
+    // const a = num.toString();
+    // const result = [a[0]];
+    //
+    // for(let x=1; x<a.length; x++)
+    // {
+    //     if((a[x-1]%2 === 0)&&(a[x]%2 === 0))
+    //     {
+    //         result.push('-', a[x]);
+    //     }
+    //     else
+    //     {
+    //         result.push(a[x]);
+    //     }
+    // }
+    // document.write(result.join(''));
+
+    // cách 2
+    let str = +prompt('nhập độ dài mảng: ');
+    let arr = [];
+    for (let i=0;i<str;i++){
+        arr[i]= +prompt('nhập số thứ'+i+'của mảng');
+    }
+    for (let i=0;i<arr.length;i++){
+        if(arr[i]%2===0 && arr[i+1]%2===0){
+            arr.splice(i +1,0, '-');
+        }
+    }
+    document.write(arr.join(""));
+</script>
+</body>
+</html>
