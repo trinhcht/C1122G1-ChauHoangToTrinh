@@ -5,8 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-    let
-    </script>
+<script>
+    let result = '';
+    let i, j;
+    for (i = 1; i <= 7; i++) {
+        if (i == 1 || i == 7) {
+            for (j = 1; j <= 21; j++) {
+                result = result + '*'
+            }
+            result = result + '<br>'
+        } else {
+            result = result + '*';
+            for (j = 1; j <= 19; j++) {
+                result = result + '&ensp;';
+            }
+            result = result + '*' + '<br>';
+        }
+    }
+    document.write(result);
+</script>
 </body>
 </html>
