@@ -7,19 +7,19 @@
 <body>
     <script>
         let n= +prompt('Nhập số n: ');
-        let e=1;
+        let e=0;
         let result='';
         function so_nguyen_to(k) {
-        let kiem_tra= true;
+        let kiemTra= true;
         if (k<2){
-            kiem_tra=false;
+            kiemTra=false;
         } else {
             for (var i=2; i<=k/2; i++){
                 if (k%i==0){
-                    kiem_tra=false;
+                    kiemTra=false;
                     break;
                 }
-            } return kiem_tra;
+            } return kiemTra;
         }
         } for (var i=1; e<=n; i++){
             if (so_nguyen_to(i)){
