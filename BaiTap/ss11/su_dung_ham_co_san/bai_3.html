@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str= prompt('Nhập chuỗi bạn muốn nhập: ');
+    let result=' ';
+    for (let i =0;i<str.length;i++){
+        if(str[i]===str[i].toUpperCase()){
+            result=result+str[i].toLocaleLowerCase();
+        }else {
+            result=result+str[i].toUpperCase();
+        }
+    }
+    document.write(result);
+</script>
+</body>
+</html>

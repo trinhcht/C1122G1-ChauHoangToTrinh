@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt('nhập số phần tử bạn muốn: ');
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('nhập phần tử trong mảng ' + i);
+    }
+    document.write('mảng trước khi chuyển đổi: '+arr + '<br>');
+    document.write('mảng sau khi chuyển đổi: '+arr.reverse());
+</script>
+</body>
+</html>

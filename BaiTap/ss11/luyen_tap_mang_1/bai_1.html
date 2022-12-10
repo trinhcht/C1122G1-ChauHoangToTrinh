@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="bai1"></div>
+<div id="test"></div>
+<script>
+    let arr = [];
+    let count = 0;
+    let result = '';
+    for (let i = 1; i < 11; i++) {
+        arr[i] = +prompt('nhập phần tử thứ: ' + i);
+        if (arr[i] >= 10) {
+            count += 1;
+            result = result + arr[i].toString() + '<br>';
+        }
+    }
+    document.getElementById('bai1').innerHTML = 'có' + count + 'số lớn hơn hoặc bằng 10 là: ';
+    document.getElementById('test').innerHTML = result;
+</script>
+</body>
+</html>

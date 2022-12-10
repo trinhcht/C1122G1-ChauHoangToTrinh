@@ -5,29 +5,33 @@
     <title>Hiển thị số nguyên tố đâu tiên</title>
 </head>
 <body>
-    <script>
-        let n= +prompt('Nhập số n: ');
-        let e=0;
-        let result='';
-        function so_nguyen_to(k) {
-        let kiemTra= true;
-        if (k<2){
-            kiemTra=false;
+<script>
+    let n = +prompt('Nhập số n: ');
+    let e = 0;
+    let result = '';
+
+    function so_nguyen_to(k) {
+        let kiemTra = true;
+        if (k < 2) {
+            kiemTra = false;
         } else {
-            for (var i=2; i<=k/2; i++){
-                if (k%i==0){
-                    kiemTra=false;
+            for (var i = 2; i <= k / 2; i++) {
+                if (k % i == 0) {
+                    kiemTra = false;
                     break;
                 }
-            } return kiemTra;
-        }
-        } for (var i=1; e<=n; i++){
-            if (so_nguyen_to(i)){
-                result= result+' '+i.toString();
-                e+=1;
             }
+            return kiemTra;
         }
-        document.write(result);
-    </script>
+    }
+
+    for (var i = 1; e <= n; i++) {
+        if (so_nguyen_to(i)) {
+            result = result + ' ' + i.toString();
+            e += 1;
+        }
+    }
+    document.write(result);
+</script>
 </body>
 </html>

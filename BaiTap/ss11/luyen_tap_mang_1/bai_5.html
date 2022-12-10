@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("Số phần rử bạn cần nhập");
+    let dem = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('nhập số phần tử ' + i);
+        if (arr[i] < 0) {
+            document.write(arr[i]+'<br>');
+            dem++;
+        }
+    }
+    document.write('số lượng nguyên âm trong mảng là: ' + dem);
+</script>
+</body>
+</html>

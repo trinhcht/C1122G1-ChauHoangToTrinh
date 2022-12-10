@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="bai_2"></div>
+<script>
+    let arr = [];
+    let dem = 1;
+    let max;
+    for (let i = 1; i <= 10; i++) {
+        arr[i] = +prompt('nhập số phần tử i: ');
+        if (i === 1) {
+            max = +arr[1];
+        } else if (+arr[i] > max) {
+            max = +arr[i];
+            dem = i;
+        }
+    }
+    document.getElementById('bai_2').innerHTML = 'số lớn nhất là: ' + max + ' nằm ở vị trí ' + dem;
+</script>
+</body>
+</html>
