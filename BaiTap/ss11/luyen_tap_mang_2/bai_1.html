@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    let i, j;
+    let arr2 = '';
+    for (i in arr) {
+        arr2 = arr2 + 'row ' + i + '<br>';
+        for (j in arr[i]) {
+            arr2 = arr2 + arr[i][j].toString() + '<br>';
+        }
+    }
+    document.write(arr2);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt('Nhập số phần tử');
+    let dem = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('Nhập phần tử thứ ' + i);
+        if (arr[i] === +arr[i]) {
+            dem++;
+        }
+    }
+    document.write('Số ký tự trong mảng là: ' + dem);
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chain1= prompt('Nhập chuỗi thứ 1: ');
+    let chain2= prompt('Nhập chuỗi thứ 2: ');
+    let arr1 = chain1.split(' ');
+    let arr2 = chain2.split(' ');
+    let kiemTra = true;
+    if (arr1.length === arr2.length){
+        for (let i =0; i<arr1.length;i++){
+            if (arr1[i] === arr2[i]){
+                kiemTra = true;
+            }else {
+                document.write('Hai mảng khác nhau');
+                kiemTra = false;
+                break;
+            }
+        }
+        if (kiemTra){
+            document.write('Hai mảng giống nhau')
+        }
+    }
+</script>
+</body>
+</html>

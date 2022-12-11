@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chain = prompt('Nhập vào các chỗi ký tự');
+    let dem = 0;
+    let a = chain.split('');
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] / a[i] != 1) {
+            dem++;
+        }
+    }
+    document.write('có ' + dem + ' từ trong chuỗi');
+</script>
+</body>
+</html>
