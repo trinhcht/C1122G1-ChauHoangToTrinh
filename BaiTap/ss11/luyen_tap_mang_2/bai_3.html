@@ -6,16 +6,17 @@
 </head>
 <body>
 <script>
+    let n = prompt('Số phần tử bạn muốn kiểm tra: ');
     let arr = [];
-    let n = +prompt('Nhập số phần tử');
     let dem = 0;
     for (let i = 0; i < n; i++) {
-        arr[i] = +prompt('Nhập phần tử thứ ' + i);
-        if (arr[i] === +arr[i]) {
+        arr[i] = prompt('Nhập ký tự thứ ' + i);
+        if (isFinite(arr[i])){
             dem++;
         }
     }
-    document.write('Số ký tự trong mảng là: ' + dem);
+    document.write('Chuỗi vừa nhập: ' +arr +'<br>');
+    document.write('Số ký tự số trong mảng: ' +dem + '<br>');
 </script>
 </body>
 </html>
