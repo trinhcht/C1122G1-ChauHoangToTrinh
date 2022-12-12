@@ -5,7 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let arr = [];
+    let n = prompt('Nhập số phần tử ');
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('Nhập phần tử thứ ' + i);
+    }
+    document.write('Dãy ban đầu: '+arr.sort() +'<br>');
+    document.write('Dãy sau khi đảo ngược: ' +arr.reverse());
+</script>
 </body>
 </html>
 
