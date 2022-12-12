@@ -14,9 +14,12 @@
             } else if (nhietDo<20){
                 alert('Tăng nhiệt độ ');
                 nhietDo= +prompt('Nhập nhiệt độ ');
-            } else {
+            } else if (20<=nhietDo && nhietDo<=100) {
                 alert('Nhiệt độ bình thường ');
                 break;
+            } else {
+                alert('Nhiệt độ bạn nhập không hợp lệ vui lòng nhập lại ');
+                nhietDo= +prompt('Nhập nhiệt độ ');
             }
         }
     </script>
