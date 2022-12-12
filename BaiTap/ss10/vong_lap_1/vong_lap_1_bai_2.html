@@ -10,12 +10,14 @@
         for (let i=0; i<=100; i++){
             if (nhietDo>100){
                 alert('Giảm nhiệt độ ');
-            } else if (20<=nhietDo && nhietDo<=100){
-                alert('Nhiệt độ bình thường ');
-            } else {
+                nhietDo= +prompt('Nhập nhiệt độ ');
+            } else if (nhietDo<20){
                 alert('Tăng nhiệt độ ');
+                nhietDo= +prompt('Nhập nhiệt độ ');
+            } else {
+                alert('Nhiệt độ bình thường ');
+                break;
             }
-            break;
         }
     </script>
 </body>
