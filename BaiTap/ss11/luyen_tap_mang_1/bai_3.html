@@ -11,7 +11,8 @@
     let a = [];
     let dem = 0;
     let max;
-    for (i = 1; i <= 10; i++) {
+    let n=+prompt('Nhập n: ');
+    for (i = 1; i <= n; i++) {
         a[i] = +prompt('nhap so thu ' + i);
         if (i == 1)
             max = +a[1];
@@ -19,7 +20,8 @@
             max = +a[i];
         dem += +a[i];
     }
-    document.getElementById('bai3').innerHTML = 'So lon nhat: ' + max + ', trung binh cong: ' + dem / 10;
+    dem=dem/n;
+    document.getElementById('bai3').innerHTML = 'So lon nhat: ' + max + ', trung binh cong: ' + dem ;
 
 </script>
 </body>
