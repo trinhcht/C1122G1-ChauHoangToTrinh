@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function kiemTra(star) {
+        for (let i=0; i<star1.length; i++){
+            if (star1[i]==star){
+                return i;
+            }
+        }
+        return -1;
+    }
+    let input= prompt('Nhập tên chòm sao ');
+    let result = ' ';
+    if (kiemTra(input)>-1){
+        result = star2[kiemTra(input)];
+    } else {
+        result = 'Không tìm thấy ';
+    }
+    document.write(result);
+</script>
+</body>
+</html>

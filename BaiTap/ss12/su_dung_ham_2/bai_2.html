@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="bai2"></div>
+<script>
+    function chuVi(r) {
+        return r * 2 * 3.14;
+    }
+
+    function dienTich(r) {
+        return r * r * 3.14;
+    }
+
+    let r = +prompt('Nhập bán kính hình tròn: ');
+    document.getElementById('bai2').innerHTML = 'Chu vi hình tròn là: ' + chuVi(r) + '<br>' + 'Diện tích hình tròn là: ' + dienTich(r);
+
+</script>
+</body>
+</html>

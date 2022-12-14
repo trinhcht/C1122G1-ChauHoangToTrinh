@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập độ dài mảng ');
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('nhập vào các phần tử ');
+    }
+
+    function kiemTra(arr1) {
+        let arr2 = [];
+        for (let j = n; j >= 0; j--) {
+            arr2.push(arr1[j]);
+        }
+        return arr2;
+    }
+
+    document.write('Mảng vừa nhập : ' + arr + '<br>');
+    document.write('Kết quả: ' + kiemTra(arr));
+</script>
+</body>
+</html>

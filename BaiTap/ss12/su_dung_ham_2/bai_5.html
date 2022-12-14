@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMin(a, b, c) {
+        let min = a;
+        if (min > b) {
+            min = b;
+        } else if (min > c) {
+            min = c;
+        }
+        return (min);
+    }
+
+    a = +prompt('Nhập vào số a ');
+    b = +prompt('Nhập vào số b ');
+    c = +prompt('Nhập vào số c ');
+    document.write('Số nhỏ nhất là ' + findMin(a, b, c));
+</script>
+</body>
+</html>

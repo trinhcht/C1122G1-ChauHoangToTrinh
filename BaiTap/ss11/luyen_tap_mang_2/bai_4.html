@@ -6,16 +6,18 @@
 </head>
 <body>
 <script>
-    let chain = prompt('Nhập vào các chuỗi ký tự');
-    let dem = 0;
-    let a = chain.split('');
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] / a[i] != 1) {
-            dem++;
+    let string = prompt('Nhập chuỗi :')
+    let count = 0;
+    for (let i=0; i<string.length; i++) {
+        if (string[i] !== " " && string[i+1] === " ") {
+            count++;
         }
     }
-    document.write('Chuỗi vừa nhập là: ' +chain +'<br>' );
-    document.write('Có ' + dem + ' từ trong chuỗi');
+    if (string[string.length-1] !== " ") {
+        count+=1;
+    }
+    document.write('Chuỗi vừa nhập là '+ string + '<br>');
+    document.write("Số từ trong chuỗi là " + count);
 </script>
 </body>
 </html>

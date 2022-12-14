@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let kiemTra = true;
+
+        if (number < 2) {
+
+            kiemTra = false;
+        } else {
+            for (let i = 2; i <= number / 2; i++) {
+                if (number % i == 0) {
+                    kiemTra = false;
+                    break;
+                }
+            }
+            return kiemTra;
+        }
+    }
+
+    let count = '';
+
+    for (i = 1; i < 10000; i++) {
+        if (isPrime(i)) {
+            count = count + i + '  ';
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>
