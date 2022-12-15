@@ -9,19 +9,19 @@
 <script>
     let i;
     let a = [];
-    let dem = 0;
+    let count = 0;
     let max;
-    let n=+prompt('Nhập độ dài của mảng ');
+    let n = +prompt('Nhập độ dài của mảng ');
     for (i = 1; i <= n; i++) {
         a[i] = +prompt('nhap so thu ' + i);
         if (i == 1)
             max = a[1];
         if (a[i] > max)
             max = a[i];
-        dem += a[i];
+        count += a[i];
     }
-    dem=dem/n;
-    document.getElementById('bai3').innerHTML = 'Số lớn nhất: ' + max + '<br>' + 'Trung bình cộng: ' + dem ;
+    count /= n;
+    document.getElementById('bai3').innerHTML = 'Số lớn nhất: ' + max + '<br>' + 'Trung bình cộng: ' + count;
 
 </script>
 </body>
