@@ -13,11 +13,10 @@
         [7, 4, 28, 14],
         [3, 10, 26, 7]
     ];
-    let i, j;
     let arr2 = '';
-    for (i in arr) {
+    for (let i in arr) {
         arr2 = arr2 + 'row ' + i + '<br>';
-        for (j in arr[i]) {
+        for (let j in arr[i]) {
             arr2 = arr2 + arr[i][j].toString() + '<br>';
         }
     }
