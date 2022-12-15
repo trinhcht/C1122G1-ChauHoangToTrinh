@@ -9,24 +9,24 @@
     let length = prompt('Nhập độ dài mảng ');
     let arr = [];
     let kiTu = prompt('Nhập ký tự ');
-    let dem = 0;
+    let count = 0;
 
-    function kiemTra() {
+    function check() {
         for (let i = 0; i < length; i++) {
             arr[i] = prompt('Nhập phần tử thứ ' + i);
             if (kiTu == arr[i]) {
-                dem++;
+                count++;
             }
         }
-        if (dem == 0) {
+        if (count == 0) {
             return -1;
         } else {
-            return 'Có ' + dem + ' lần xuât hiện';
+            return 'Có ' + count + ' lần xuât hiện';
         }
 
     }
 
-    document.write(kiemTra());
+    document.write(check());
 </script>
 </body>
 </html>
