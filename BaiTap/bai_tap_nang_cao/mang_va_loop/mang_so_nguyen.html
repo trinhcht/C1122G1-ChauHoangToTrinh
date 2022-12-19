@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập độ dài của mảng ');
+    let arr = [];
+    let arr1 = [];
+    let count = 0;
+
+    function prefixSums()
+    {
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt('Nhập phần tử thứ ' + i);
+        }
+        for (let j = 0; j < n; j++) {
+            count += +arr[j];
+            arr1.push(count);
+        }
+    }
+    document.write(prefixSums(arr1));
+</script>
+</body>
+</html>
