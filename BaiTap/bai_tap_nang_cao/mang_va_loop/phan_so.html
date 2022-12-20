@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập số phần tử bạn muốn: ');
+    let numerator = [];
+    let denominator = [];
+    let i;
+    let max;
+    for (i = 0; i < n; i++) {
+        numerator[i] = prompt('Nhập số phần tử thứ: ' + i);
+        denominator[i] = prompt('Nhập số phần tử thứ: ' + i);
+        if (i == 0)
+            max = (+numerator[i]) / (+denominator[i])
+        if ((+numerator[i]) / (+denominator[i]) > max)
+            max = (+numerator[i]) / (+denominator[i])
+    }
+    document.write('Chi so lon nhat : ' + Math.ceil(max)+'<br>');
+    document.write('Tử số: '+numerator+'<br>');
+    document.write('Mẫu số: '+denominator+'<br>');
+</script>
+</body>
+</html>
