@@ -6,22 +6,26 @@
 </head>
 <body>
 <script>
-    let chain1 = prompt('Nhập chuỗi thứ 1: ');
-    let chain2 = prompt('Nhập chuỗi thứ 2: ');
+    let chain1 = prompt('Nhập chuỗi a: ');
+    let chain2 = prompt('Nhập chuỗi b: ');
     let arr1 = chain1.split('');
     let arr2 = chain2.split('');
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr2.indexOf(arr1[i])>-1){
-            arr2.splice(arr2.indexOf(arr1[i]),1);
+    function missingValue(a,b){
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr2.indexOf(arr1[i])>-1){
+                arr2.splice(arr2.indexOf(arr1[i]),1);
+            }
         }
+        return arr2;
     }
-    let  missingValue=[];
+
+    let  result=[];
     arr2.forEach(item=>{
-        if (!missingValue.includes(item)) {
-            missingValue.push(item);
+        if (!result.includes(item)) {
+            result.push(item);
         }
     })
-    document.write('Các phần tử không xuất hiện ở mảng 1 là: ' + missingValue);
+    document.write('Các phần tử không xuất hiện ở mảng 1 là: ' + result);
 </script>
 </body>
 </html>
