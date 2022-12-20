@@ -6,26 +6,18 @@
 </head>
 <body>
 <script>
-    let chain1 = prompt('Nhập chuỗi a: ');
-    let chain2 = prompt('Nhập chuỗi b: ');
-    let arr1 = chain1.split('');
-    let arr2 = chain2.split('');
-    function missingValue(a,b){
-        for (let i = 0; i < arr1.length; i++) {
-            if (arr2.indexOf(arr1[i])>-1){
-                arr2.splice(arr2.indexOf(arr1[i]),1);
+    function demo(arr1, arr2) {
+        let arrC = [];
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr1.includes(arr2[i]) === false && !arrC.includes(arr2[i])) {
+                arrC.push(arr2[i]);
             }
         }
-        return arr2;
+        return arrC;
     }
-
-    let  result=[];
-    arr2.forEach(item=>{
-        if (!result.includes(item)) {
-            result.push(item);
-        }
-    })
-    document.write('Các phần tử không xuất hiện ở mảng 1 là: ' + result);
+    let arrA = prompt('Nhập chuỗi thứ 1 ');
+    let arrB = prompt('Nhập chuỗi thứ 2 ');
+    document.write(demo(arrA,arrB))
 </script>
 </body>
 </html>
