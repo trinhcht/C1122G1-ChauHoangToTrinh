@@ -15,7 +15,13 @@
             arr2.splice(arr2.indexOf(arr1[i]),1);
         }
     }
-    document.write(arr2);
+    let  missingValue=[];
+    arr2.forEach(item=>{
+        if (!missingValue.includes(item)) {
+            missingValue.push(item);
+        }
+    })
+    document.write('Các phần tử không xuất hiện ở mảng 1 là: ' + missingValue);
 </script>
 </body>
 </html>
