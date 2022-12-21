@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sumEvenNumber(array2d) {
+        let sum = 0;
+        for (let i = 0; i < array2d.length; i++) {
+            for (let j = 0; j < array2d[i].length; j++) {
+                if (array2d[i][j] % 2 === 0) {
+                    sum += array2d[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    document.write("Ma trận: " + "<br>");
+    let row = parseInt(prompt("Nhập số dòng: "));
+    let col = parseInt(prompt("Nhập số cột: "));
+    let matrix = [];
+    for (let i = 0; i < row; i++) {
+        document.write("[ ");
+        let array = [];
+        for (let j = 0; j < col; j++) {
+            array[j] = parseInt(prompt("Nhập matrix[" + i + "][" + j + "]"));
+            document.write(array[j] + "  ");
+        }
+        matrix[i] = array;
+        document.write(" ]" + "<br>");
+    }
+    document.write("Tổng các số chẵn trong Ma trận là: " + sumEvenNumber(matrix));
+</script>
+</body>
+</html>

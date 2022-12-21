@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    let salary= +prompt('Nhập lương ');
+    let salary = +prompt('Nhập lương ');
     let vat;
     let salarynet;
-    if (salary>=15000000){
-        vat = (salary*20)/100;
-    } else if (salary>=7000000 && salary<15000000){
-        vat = (salary*10)/100;
+    if (salary >= 15000000) {
+        vat = (salary * 20) / 100;
+    } else if (salary >= 7000000 && salary < 15000000) {
+        vat = (salary * 10) / 100;
     } else {
-        vat = (salary*5)/100;
+        vat = (salary * 5) / 100;
     }
-    salarynet= salary-vat;
+    salarynet = salary - vat;
     document.write('Thuế thu nhập là ' + vat + '<br>');
-    document.write('Lương ròng là ' + salarynet );
+    document.write('Lương ròng là ' + salarynet);
 </script>
 </body>
 </html>

@@ -6,8 +6,8 @@
 </head>
 <body>
 <script>
-    let menu = ["Cafe","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"];
-    let price = [20000,170000,15000,150000,10000,25000];
+    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let price = [20000, 170000, 15000, 150000, 10000, 25000];
     let sum = 0;
     let count = 0;
     let number;
@@ -16,26 +16,26 @@
     do {
         alert("Menu\n1. Cafe\n2.Cam vắt\n3. Nước ép cà rốt\n4. nước ép cà chua\n5. Nước lọc\n6. Nước dừa\n7. Thoát gọi món!")
         choose = parseInt(prompt("Vui lòng chọn món mới: "));
-        if (choose !== 7){
-            for (let i = 0; i<menu.length;i++){
-                if (choose === i +1){
+        if (choose !== 7) {
+            for (let i = 0; i < menu.length; i++) {
+                if (choose === i + 1) {
                     alert(menu[i] + ":" + price[i] + "VNĐ");
 
                     do {
                         number = parseInt(prompt("Vui lòng nhập số lượng nước: "));
-                    }while (!(number%1 === 0 && number>0));
+                    } while (!(number % 1 === 0 && number > 0));
 
                     alert(menu[i] + "x" + number + "=" + price[i] * number + "VNĐ");
                     count++;
-                    document.write("Oder lần thứ "+count+ ": " + number + " x " + menu[i] + " = " + price[i] * number + "VNĐ" + '<br>');
+                    document.write("Oder lần thứ " + count + ": " + number + " x " + menu[i] + " = " + price[i] * number + "VNĐ" + '<br>');
                     sum += price[i] * number;
                 }
             }
             alert("Vui lòng nhập lại món!");
-        }else {
+        } else {
             alert("Cảm ơn quý khách!");
         }
-    }while (choose !== 7);
+    } while (choose !== 7);
     document.write("<br>" + "Tổng cộng " + sum + "VNĐ");
 </script>
 </body>

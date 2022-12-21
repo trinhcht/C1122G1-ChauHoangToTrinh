@@ -6,18 +6,19 @@
 </head>
 <body>
 <script>
-    function differentSymbolsNaive(kyTu){
+    function differentSymbolsNaive(kyTu) {
         let kyTu1 = kyTu.split("");
-        let kyTu2 =[];
-        let count =0;
-        for (let i = 0; i < kyTu1.length ; i++) {
-            if (!kyTu2.includes(kyTu1[i])){
+        let kyTu2 = [];
+        let count = 0;
+        for (let i = 0; i < kyTu1.length; i++) {
+            if (!kyTu2.includes(kyTu1[i])) {
                 kyTu2.push(kyTu1[i]);
                 count++;
             }
         }
-        return document.write("Các ký tự khác nhau: "+kyTu2+"<br>"+" có "+count +" kí tự khác nhau.");
+        return document.write("Các ký tự khác nhau: " + kyTu2 + "<br>" + " có " + count + " kí tự khác nhau.");
     }
+
     let kyTu = prompt('Nhập chuỗi ký tự ');
     differentSymbolsNaive(kyTu);
 </script>

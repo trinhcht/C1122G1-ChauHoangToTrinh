@@ -9,9 +9,9 @@
     function ommonCharacterCount(string1, string2) {
         let array2 = string2.split('');
         let array = [];
-        for (let i=0; i<string1.length; i++) {
-            for (let j=0; j<array2.length; j++) {
-                if (string1[i]===array2[j]) {
+        for (let i = 0; i < string1.length; i++) {
+            for (let j = 0; j < array2.length; j++) {
+                if (string1[i] === array2[j]) {
                     array.push(array2[j]);
                     array2.splice(j, 1);
                     break;
@@ -20,6 +20,7 @@
         }
         return array;
     }
+
     let string1 = prompt("Nhập chuỗi thứ nhất: ");
     let string2 = prompt("Nhập chuỗi thứ hai: ");
     document.write("Chuỗi thứ nhất: " + string1 + "<br>");
