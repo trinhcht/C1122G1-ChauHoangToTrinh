@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    function demo(arr1, arr2) {
+    function missingValue(arr1, arr2) {
         let arrC = [];
         for (let i = 0; i < arr2.length; i++) {
             if (arr1.includes(arr2[i]) === false && !arrC.includes(arr2[i])) {
@@ -17,7 +17,7 @@
     }
     let arrA = prompt('Nhập chuỗi thứ 1 ');
     let arrB = prompt('Nhập chuỗi thứ 2 ');
-    document.write(demo(arrA,arrB))
+    document.write(missingValue(arrA,arrB))
 </script>
 </body>
 </html>
