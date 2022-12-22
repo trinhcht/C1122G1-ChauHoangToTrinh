@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('nhập độ dài của mảng');
+    let arr = new Array(n);
+
+    for (let i = 0; i < n; i++) {
+        let l = +prompt('nhập độ dài của mảng thứ ' + (i + 1));
+        let array = new Array(l);
+        for (let j = 0; j < l; j++) {
+            array[j] = +prompt('nhập phần tử thứ ' + j);
+        }
+        arr[i] = array;
+    }
+    document.write(arr);
+    document.write('<br>');
+
+    function isPrime(arr) {
+        let count = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                let flag = true;
+                for (let z = 2; z <= Math.sqrt(arr[i][j]); z++) {
+                    if (arr[i][j] % z == 0) {
+                        flag = false;
+                        break;
+                    }
+                }if (flag) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    document.write('Số nguyên tố có trong mảng là ' + isPrime(arr));
+</script>
+</body>
+</html>

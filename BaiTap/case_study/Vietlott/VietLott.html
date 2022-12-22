@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thời Khóa Biểu</title>
+</head>
+<body>
+<h1>Xổ số CodeGym</h1>
+<div id="vesoId"></div>
+<button onclick="addVietlott()">Mua vé</button>
+<button onclick="resultVietlott()">Xem kết quả</button>
+<br><p id="resultId"></p><br>
+<div id="bonusId"></div>
+<script>
+    let array2d = [];
+    function addVietlott() {
+        let array = [];
+        let choose;
+        if (array2d.length === 4) {
+            alert("Bạn đã hết 4 lần mua vé!");
+        } else {
+            do {
+                choose = parseInt(prompt("Bạn có hai lựa chọn:\n1. Bạn tự chọn số.\n2. Hệ thống tự Random."));
+            } while (!(choose === 1 || choose === 2));
+            if (choose === 1) {
+                for (let i = 0; i < 6; i++) {
+                    array[i] = prompt("Nhập số thứ " + (i + 1) + " (từ 01 - 99)");
+                    if (array[i] < 10) {
+                        array[i] = "0" + array[i];
+                    }
+                }
+            } else {
+                for (let i = 0; i < 6; i++) {
+                    array[i] = Math.floor(Math.random() * 99) + 1;
+                    if (array[i] < 10) {
+                        array[i] = "0" + array[i];
+                    } else {
+                        array[i] = array[i].toString();
+                    }
+                }
+            }
+            array2d.push(array);
+            displayVietlott();
+        }
+    }
+
+    function displayVietlott() {
+        let list = "<table>";
+        for (let i = 0; i < array2d.length; i++) {
+            list += "<tr>";
+            list += "<td>" + "Mua vé lần " +(i+1)+ ": " + "</td>";
+            list += "<td>" + "<input type='number' id='num1Id' style='width: 40px' value="+array2d[i][0]+">" + "</td>";
+            list += "<td>" + "<input type='number' id='num2Id' style='width: 40px' value="+array2d[i][1]+">" + "</td>";
+            list += "<td>" + "<input type='number' id='num3Id' style='width: 40px' value="+array2d[i][2]+">" + "</td>";
+            list += "<td>" + "<input type='number' id='num4Id' style='width: 40px' value="+array2d[i][3]+">" + "</td>";
+            list += "<td>" + "<input type='number' id='num5Id' style='width: 40px' value="+array2d[i][4]+">" + "</td>";
+            list += "<td>" + "<input type='number' id='num6Id' style='width: 40px' value="+array2d[i][5]+">" + "</td>";
+            list += "</tr>";
+        }
+        list += "</table>";
+        document.getElementById("vesoId").innerHTML = list;
+    }
+    displayVietlott();
+
+    let arrayResult = [];
+    for (let i = 0; i < 6; i++) {
+        arrayResult[i] = Math.floor(Math.random() * 99) + 1;
+        if (arrayResult[i] < 10) {
+            arrayResult[i] = "0" + arrayResult[i];
+        } else {
+            arrayResult[i] = arrayResult[i].toString();
+        }
+    }
+    function resultVietlott() {
+        let result = "<table>";
+        result += "<tr>";
+        result += "<td>" + "Kết quả xổ số: " + "</td>";
+        result += "<td>" + "<input type='number' id='result1Id' style='width: 40px' value="+arrayResult[0]+">" + "</td>";
+        result += "<td>" + "<input type='number' id='result2Id' style='width: 40px' value="+arrayResult[1]+">" + "</td>";
+        result += "<td>" + "<input type='number' id='result3Id' style='width: 40px' value="+arrayResult[2]+">" + "</td>";
+        result += "<td>" + "<input type='number' id='result4Id' style='width: 40px' value="+arrayResult[3]+">" + "</td>";
+        result += "<td>" + "<input type='number' id='result5Id' style='width: 40px' value="+arrayResult[4]+">" + "</td>";
+        result += "<td>" + "<input type='number' id='result6Id' style='width: 40px' value="+arrayResult[5]+">" + "</td>";
+        result += "</tr>";
+        result += "</table>";
+        document.getElementById("resultId").innerHTML = result;
+
+        let countBonus = 0;
+        let bonus = "";
+        for (let i=0; i<array2d.length; i++) {
+            let count = 0;
+            for (let j=0; j<6; j++) {
+                if (arrayResult.includes(array2d[i][j])) {
+                    count++;
+                }
+            }
+            switch (count) {
+                case 6:
+                    bonus += "Kết quả dò Vé " + (i+1) + ": TRÚNG ĐỘC ĐẮC!" + "<br>";
+                    countBonus++;
+                    break;
+                case 5:
+                    bonus += "Kết quả dò Vé " + (i+1) + ": TRÚNG GIẢI NHẤT!" + "<br>";
+                    countBonus++;
+                    break;
+                case 4:
+                    bonus += "Kết quả dò Vé " + (i+1) + ": TRÚNG GIẢI NHÌ!" + "<br>";
+                    countBonus++;
+                    break;
+                case 3:
+                    bonus += "Kết quả dò Vé " + (i+1) + ": TRÚNG GIẢI AN ỦI!" + "<br>";
+                    countBonus++;
+                    break;
+                default:
+                    bonus += "Kết quả dò Vé " + (i+1) + ": TẠCH!" + "<br>";
+            }
+        }
+        document.getElementById("bonusId").innerHTML = bonus;
+        if (countBonus===0) {
+            alert("Tất cả các vé bạn mua đều đã 'tạch'.\nCHÚC BẠN MAY MẮN LẦN SAU!");
+        }
+        else {
+            alert("CHÚC MỪNG BẠN ĐÃ TRÚNG GIẢI!");
+        }
+    }
+</script>
+</body>
+</html>
