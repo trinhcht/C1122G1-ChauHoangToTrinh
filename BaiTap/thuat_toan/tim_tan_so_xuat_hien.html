@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho một mảng số nguyên Hãy kiểm tra xem tần số xuất hiện của tất cả các số nguyên trong mảng có bằng nhau hay không-->
+<script>
+    let arg1 = prompt("nhập");
+    function solution(arg1) {
+        const variableMap = {};
+        var flag = true;
+        for(var i = 0; i < arg1.length; i++){
+            if(variableMap[arg1[i]] !== undefined){
+                variableMap[arg1[i]]++;
+            }else{
+                variableMap[arg1[i]] = 1;
+            }
+        }
+        const keys = Object.keys(variableMap);
+        for(var i = 1; i < keys.length; i++ ){
+            if(variableMap[keys[i]] !== variableMap[keys[0]])
+                flag = false;
+        }
+        return flag;
+    }
+    document.write(solution(arg1));
+</script>
+</body>
+</html>

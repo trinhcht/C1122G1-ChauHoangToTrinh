@@ -6,28 +6,44 @@
 </head>
 <body>
 <script>
-    function CheckString(str) {
-        let a = str.toLowerCase().split(" "); // viết thường hết mấy cái chữ mình nhập vào
-        for (let i = 0; i < a.length; i++) {
-            a[i] = a[i].charAt(0).toUpperCase() + a[i].substring(1); //chọn 1 mảng và viết hoa giá trị đầu tiên của từng chữ
-        }
-        return a.join(' '); // xóa dấu cách
-    }
-
-    function max(arr) {
-        let max = arr[0];
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[j] > max) {
-                max = arr[j];
+    function checkString(string) {
+        let arrayString = [];
+        let arrayCount = [];
+        let newString = "";
+        let count = 0;
+        let max = count;
+        for (let i=0; i<string.length; i++) {
+            if (string[i] !== " ") {
+                if (string[i-1] === " " || string[i-1] === undefined) {
+                    newString += string[i].toUpperCase();
+                }
+                else {
+                    newString += string[i].toLowerCase();
+                }
+                count++;
+                if (string[i+1] === " " || string[i+1] === undefined) {
+                    arrayString.push(newString);
+                    arrayCount.push(count);
+                    if (count>max) {
+                        max = count;
+                    }
+                    newString = "";
+                    count = 0;
+                }
             }
         }
-        return max;
+        document.write("Trước khi chuẩn hóa: " + string + "<br>");
+        document.write("Sau khi chuẩn hóa: " + arrayString.join(" ") + "<br>");
+        let array = [];
+        for (let i=0; i<arrayCount.length; i++) {
+            if (arrayCount[i]===max) {
+                array.push(arrayString[i]);
+            }
+        }
+        document.write("Từ dài nhất: " + array + " (" + max + " kí tự)" + "<br>");
     }
-
-    let a = prompt("Nhập chuỗi bạn muốn chuyển đổi: ");
-    document.write("Chuỗi từ bạn vừa nhập sau khi chuyển đổi: " + CheckString(a) + '<br>');
-    let array = CheckString(a).split(' ');
-    document.write('Chữ dài nhất trong chuỗi là: ' + max(array));
+    let string = prompt("Nhập xâu kí tự: ");
+    checkString(string);
 </script>
 </body>
 </html>

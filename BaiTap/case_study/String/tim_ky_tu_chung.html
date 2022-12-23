@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    function ommonCharacterCount(string1, string2) {
+    function commonCharacterCount(string1, string2) {
         let array2 = string2.split('');
         let array = [];
         for (let i = 0; i < string1.length; i++) {
@@ -25,8 +25,8 @@
     let string2 = prompt("Nhập chuỗi thứ hai: ");
     document.write("Chuỗi thứ nhất: " + string1 + "<br>");
     document.write("Chuỗi thứ hai: " + string2 + "<br>");
-    document.write("Các kí tự chung: " + ommonCharacterCount(string1, string2) + "<br>");
-    document.write("Số lượng kí tự chung: " + ommonCharacterCount(string1, string2).length);
+    document.write("Các kí tự chung: " + commonCharacterCount(string1, string2) + "<br>");
+    document.write("Số lượng kí tự chung: " + commonCharacterCount(string1, string2).length);
 </script>
 </body>
 </html>
